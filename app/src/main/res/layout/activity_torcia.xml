@@ -19,11 +19,11 @@
         android:onClick="callTorcia"
         android:layout_centerHorizontal="true" />
 
-    <ToggleButton
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Sos"
-        android:id="@+id/toggleButtonSos"
+        android:id="@+id/ButtonSos"
         android:layout_centerVertical="true"
         android:onClick="sendSOS"
         android:layout_centerHorizontal="true" />
@@ -43,7 +43,7 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="SOS SIGNAL"
         android:id="@+id/textView3"
-        android:layout_below="@+id/toggleButtonSos"
+        android:layout_below="@+id/ButtonSos"
         android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

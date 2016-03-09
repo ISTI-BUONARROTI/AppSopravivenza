@@ -67,7 +67,11 @@ public class TorciaActivity extends AppCompatActivity {
     }
 
     public void sendSOS(View view){
-
+        if(!isFlashOn){
+            turnOnFlashSOS();
+        }else{
+            turnOffFlash();
+        }
     }
     /*
      * Turning Off flash
@@ -105,6 +109,99 @@ public class TorciaActivity extends AppCompatActivity {
             camera.setParameters(params);
             camera.startPreview();
             isFlashOn = true;
+
+
+        }
+
+    }
+
+    /*
+* Turning On flash
+*/
+    private void turnOnFlashSOS() {
+        if (!isFlashOn) {
+            if (camera == null || params == null) {
+                return;
+            }
+
+
+            new Thread () {
+                public void run() {
+                    int sleepTime =0;
+                    String myMorseString = "111000111";
+                    if(myMorseString != null){
+                        for (int x = 0; x < myMorseString.length(); x++) {
+                            if (myMorseString.charAt(x) == '2') {
+                                //camera = Camera.open();
+                                sleepTime = 500;
+                                Camera.Parameters p = camera.getParameters();
+                                p.setFlashMode(Camera.Parameters.FLASH_MODE_TORCH);
+                                camera.setParameters(p);
+                                camera.startPreview();
+                                try {
+                                    Thread.sleep(sleepTime);
+                                } catch (InterruptedException e) {
+                                    e.printStackTrace();
+                                }
+                                // power off after signal
+                                params.setFlashMode(Camera.Parameters.FLASH_MODE_OFF);
+                                camera.setParameters(params);
+                                camera.stopPreview();
+
+                               // camera = null;
+                                try {
+                                    Thread.sleep(100);
+                                } catch (InterruptedException e) {
+                                    e.printStackTrace();
+                                }
+                            }
+
+                            if (myMorseString.charAt(x) == '1') {
+                               // camera = Camera.open();
+                                sleepTime = 250;
+                                Camera.Parameters p = camera.getParameters();
+                                p.setFlashMode(Camera.Parameters.FLASH_MODE_TORCH);
+                                camera.setParameters(p);
+                                camera.startPreview();
+                                try {
+                                    Thread.sleep(sleepTime);
+                                } catch (InterruptedException e) {
+                                    e.printStackTrace();
+                                }
+
+                                // power off after signal
+                                params.setFlashMode(Camera.Parameters.FLASH_MODE_OFF);
+                                camera.setParameters(params);
+                                camera.stopPreview();
+
+                                //camera = null;
+                                try {
+                                    Thread.sleep(100);
+                                } catch (InterruptedException e) {
+                                    e.printStackTrace();
+                                }
+                            }
+
+                            if (myMorseString.charAt(x) == '0') {
+                              //  camera = Camera.open();
+                                sleepTime = 250;
+                                Camera.Parameters p = camera.getParameters();
+                                camera.setParameters(p);
+                                //camera.startPreview();
+                                params.setFlashMode(Camera.Parameters.FLASH_MODE_OFF);
+                                camera.setParameters(params);
+                                camera.stopPreview();
+
+                               // camera = null;
+
+                                try {
+                                    Thread.sleep(sleepTime);
+                                } catch (InterruptedException e) {
+                                    e.printStackTrace();
+                                }
+                            }
+                        }}}
+            }.start();
 
 
         }
