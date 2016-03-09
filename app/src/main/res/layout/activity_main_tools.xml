@@ -30,10 +30,11 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="New Button"
+                android:text="Compass"
                 android:id="@+id/button"
                 android:background="@drawable/round_button"
                 android:layout_column="1"
+                android:onClick="goToCompass"
                 android:textStyle="bold" />
 
             <Button

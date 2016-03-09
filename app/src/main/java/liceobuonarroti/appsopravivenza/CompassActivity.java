@@ -107,7 +107,11 @@ public class CompassActivity extends AppCompatActivity  implements SensorEventLi
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_compass);
-
+        mSensorManager = (SensorManager)getSystemService(SENSOR_SERVICE);
+        mAccelerometer = mSensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
+        mMagnetometer = mSensorManager.getDefaultSensor(Sensor.TYPE_MAGNETIC_FIELD);
+        System.out.println(mMagnetometer);
+        mPointer = (ImageView) findViewById(R.id.pointer);
         mVisible = true;
         mControlsView = findViewById(R.id.fullscreen_content_controls);
         mContentView = findViewById(R.id.fullscreen_content);
