@@ -8,6 +8,6 @@ Questo Repository contiene il codice dell'applicazione Android
 per...
 
 
-[[img/mockup1.jpg]]
+[[/img/mockup1.jpg]]
 
 ![alt text](img/mockup2.jpg "Descrizione mockup 1“)
