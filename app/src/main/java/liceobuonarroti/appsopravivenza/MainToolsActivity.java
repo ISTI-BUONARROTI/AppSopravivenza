@@ -18,4 +18,10 @@ public class MainToolsActivity extends AppCompatActivity {
         Intent i = new Intent(MainToolsActivity.this, CompassActivity.class);
         startActivity(i);
     }
+
+
+    public void goToTorcia(View v){
+        Intent i = new Intent(MainToolsActivity.this, TorciaActivity.class);
+        startActivity(i);
+    }
 }
