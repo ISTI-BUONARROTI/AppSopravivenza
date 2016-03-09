@@ -12,7 +12,7 @@ public class TorciaActivity extends AppCompatActivity {
 
     private boolean onoff = false;
     private Camera camera;
-    private boolean isFlashOn;
+    private boolean isFlashOn = false;
     private boolean hasFlash;
     Camera.Parameters params;
 
@@ -59,7 +59,7 @@ public class TorciaActivity extends AppCompatActivity {
     }
 
     public void callTorcia(View view){
-        if(onoff){
+        if(!isFlashOn){
             turnOnFlash();
         }else{
             turnOffFlash();
