@@ -10,4 +10,4 @@ per...
 
 [[/img/mockup1.jpg]]
 
-![alt text](img/mockup2.jpg "Descrizione mockup 1“)
+[[/img/mockup2.jpg]]
