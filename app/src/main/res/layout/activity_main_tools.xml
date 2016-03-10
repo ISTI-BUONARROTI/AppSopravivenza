@@ -9,25 +9,26 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="liceobuonarroti.appsopravivenza.MainToolsActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        android:id="@+id/textView" />
-
     <TableLayout
         android:layout_width="250dp"
-        android:layout_height="250dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true">
+        android:layout_height="300dp"
+        android:layout_centerInParent="true"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentBottom="false"
+        android:layout_alignParentRight="false"
+        android:layout_alignParentTop="false"
+        android:id="@+id/tableLayout">
 
 
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_margin="10dp">
 
             <Button
+                android:elevation="10dp"
+                android:layout_margin="5dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Compass"
@@ -38,12 +39,14 @@
                 android:textStyle="bold" />
 
             <Button
+                android:elevation="10dp"
+                android:layout_margin="5dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Torcia"
                 android:background="@drawable/round_button"
                 android:id="@+id/button2"
-                android:layout_column="2"
+                android:layout_column="3"
                 android:onClick="goToTorcia" />
         </TableRow>
 
@@ -51,24 +54,37 @@
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_margin="10dp">
 
             <Button
+                android:layout_margin="5dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="New Button"
                 android:background="@drawable/round_button"
                 android:id="@+id/button3"
-                android:layout_column="1" />
+                android:layout_column="1"
+                android:visibility="invisible" />
 
             <Button
+                android:layout_margin="5dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="New Button"
                 android:id="@+id/button4"
                 android:background="@drawable/round_button"
-                android:layout_column="2" />
+                android:layout_column="3"
+                android:visibility="invisible" />
         </TableRow>
     </TableLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Creata da Matteo, Pierluigi e Giorgio"
+        android:id="@+id/textView"
+        android:layout_below="@+id/tableLayout"
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>

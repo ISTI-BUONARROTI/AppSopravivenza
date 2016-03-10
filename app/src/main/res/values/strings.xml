@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">App Sopravivenza</string>
+    <string name="app_name">App Sopravvivenza</string>
 
     <string name="title_activity_compass">Compass</string>
     <string name="dummy_button">Dummy Button</string>

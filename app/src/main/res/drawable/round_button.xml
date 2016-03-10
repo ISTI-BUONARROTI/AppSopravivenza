@@ -2,18 +2,22 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:state_pressed="false">
         <shape android:shape="oval">
-            <solid android:color="#fa09ad"/>
+            <solid android:color="#16f219"/>
+            <corners android:radius="70dp" />
+
             <size
-                android:width="120dp"
-                android:height="120dp"/>
+                android:width="100dp"
+                android:height="100dp"/>
         </shape>
     </item>
     <item android:state_pressed="true">
         <shape android:shape="oval">
-            <solid android:color="#c20586"/>
+            <solid android:color="#0fa311"/>
+            <corners android:radius="70dp" />
+
             <size
-                android:width="120dp"
-                android:height="120dp"/>
+                android:width="100dp"
+                android:height="100dp"/>
         </shape>
     </item>
 </selector>
