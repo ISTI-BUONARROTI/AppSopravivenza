@@ -8,15 +8,15 @@ Questo Repository contiene il codice dell'applicazione Android
 per la ‘sopravvivenza’
 
 di seguito un esempio di mockup dell’applicazione:
-![](img/mockup1.jpg)
 
-![](img/mockup2.jpg)
+
+<img src="img/mockup1.jpg" data-canonical-src="img/mockup1.jpg" width="300" height="300" />
+<img src="img/mockup2.jpg" data-canonical-src="img/mockup1.jpg" width="300" height="300" />
+
 
 di seguito 3 screenshot dell’applicazione ultimata:
 
+<img src="img/Screenshot_1.jpg" data-canonical-src="img/mockup1.jpg" width="200" height="350" />
+<img src="img/Screenshot_2.jpg" data-canonical-src="img/mockup1.jpg" width="200" height="350" />
+<img src="img/Screenshot_3.jpg" data-canonical-src="img/mockup1.jpg" width="200" height="350" />
 
-![](img/Screenshot_1.jpg)
-
-![](img/Screenshot_2.jpg)
-
-![](img/Screenshot_3.jpg)
